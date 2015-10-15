@@ -104,6 +104,13 @@ set undofile
 
 " 重新對應 leader key 為 (,) ，比較好打
 let mapleader = ","
+let NERDSpaceDelims=1
+"let g:NERDCustomDelimiters = {
+  "\ 'ruby': { 'left': '# ' },
+  "\ 'coffee': { 'left': '# ' },
+  "\ 'vimperator': { 'left': '" ' },
+  "\ 'javascript': { 'left': '// ', 'leftAlt': '/*', 'rightAlt': '*/' }
+  "\ }
 
 
 
@@ -171,7 +178,7 @@ vnoremap <F1> <ESC>
 nnoremap ; :
 
 " 當你切換到別的應用程式視窗時自動幫你儲存檔案
-au FocusLost * :wa
+" au FocusLost * :wa
 
 " 連按兩下 j 就從插入模式進入一般模式
 inoremap jj <ESC>
