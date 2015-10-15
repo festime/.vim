@@ -28,6 +28,7 @@ Plugin 'garbas/vim-snipmate'
 Plugin 'Shougo/neocomplcache.vim'  " 自動補齊文字和提供選項
 Plugin 'crusoexia/vim-monokai'  " 用於 HTML, CSS, JS 的 colorscheme
 Plugin 'pangloss/vim-javascript'  " 強化 JS syntax highlight
+Plugin 'kchmck/vim-coffee-script'  " coffeescript syntax highlight
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -196,7 +197,7 @@ autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 autocmd BufEnter * colorscheme railscasts
 autocmd BufEnter *.rb colorscheme railscasts
-autocmd BufEnter *.js,*.html colorscheme monokai
+autocmd BufEnter *.js,*.html,*scss,*.css colorscheme monokai
 
 
 
