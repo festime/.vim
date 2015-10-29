@@ -191,7 +191,6 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-colorscheme railscasts
 set gfn=Monaco:h18
 
 syntax on             " Enable syntax highlighting
@@ -202,9 +201,22 @@ filetype plugin on    " Enable filetype-specific plugins
 autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1 
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
-autocmd BufEnter * colorscheme railscasts
-autocmd BufEnter *.rb colorscheme railscasts
-autocmd BufEnter *.js,*.html,*scss,*.css colorscheme monokai
+autocmd BufEnter *                                colorscheme railscasts
+autocmd BufEnter *.rb                             colorscheme railscasts
+autocmd BufEnter *.js,*.html,*scss,*.css,*.coffee colorscheme monokai
+
+
+
+
+
+
+" 游標不要閃爍
+set guicursor+=a:blinkon0
+" 游標進入插入模式、退出插入模式的顏色設定
+au InsertLeave * hi Cursor guifg=black guibg=yellow
+au InsertEnter * hi Cursor guifg=black guibg=yellow
+highlight Cursor guifg=black guibg=yellow
+highlight iCursor guifg=black guibg=yellow
 
 
 
