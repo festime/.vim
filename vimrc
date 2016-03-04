@@ -104,6 +104,7 @@ set undofile
 
 " 重新對應 leader key 為 (,) ，比較好打
 let mapleader = ","
+" 用 NERDCommenter 打註解時註解符號跟 code 之間多一個空白
 let NERDSpaceDelims=1
 "let g:NERDCustomDelimiters = {
   "\ 'ruby': { 'left': '# ' },
@@ -125,7 +126,7 @@ set backspace=indent,eol,start
 
 
 
-
+" 搜尋功能相關 search function
 " 關閉 vim 預設 regex 字元，搜尋檔案內容時使用一般 regex 
 nnoremap / /\v
 vnoremap / /\v
@@ -140,9 +141,6 @@ set showmatch
 set hlsearch
 " get rid of highlight of search results
 nnoremap <leader><space> :noh<cr>
-" 按 tab 跳到該行下一個成對括號
-noremap <tab> %
-vnoremap <tab> %
 
 
 
@@ -156,6 +154,10 @@ set colorcolumn=80
 " 用特殊符號顯示 tab 字元和 eol
 set list
 set listchars=tab:▸\ ,eol:¬
+
+
+
+
 
 " 鎖定方向鍵，在插入模式和一般模式下都無法使用
 nnoremap <up> <nop>
@@ -174,6 +176,10 @@ inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
 
+" 按 tab 跳到該行下一個成對括號
+noremap <tab> %
+vnoremap <tab> %
+
 " 方便下指令，不用再 shift + <;> 來得到 <:>
 nnoremap ; :
 
@@ -190,6 +196,12 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+
+" 切換 NERDTree
+map <C-n> :NERDTreeToggle<CR>
+
+
+
 
 set gfn=Monaco:h18
 
