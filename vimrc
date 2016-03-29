@@ -117,6 +117,16 @@ let NERDSpaceDelims=1
 
 
 
+" Ruby 中斷點
+nnoremap <leader>zz obinding.pry<esc>
+" https://tenderlovemaking.com/2016/02/05/i-am-a-puts-debuggerer.html
+" puts the caller
+nnoremap <leader>wtf oputs "#" * 90<c-m>puts caller<c-m>puts "#" * 90<esc>
+
+
+
+
+
 " 意義不明
 set showcmd
 set visualbell
