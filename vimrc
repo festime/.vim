@@ -226,6 +226,7 @@ autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 autocmd BufEnter *                                colorscheme railscasts
 autocmd BufEnter *.rb                             colorscheme railscasts
 autocmd BufEnter *.js,*.html,*scss,*.css,*.coffee colorscheme monokai
+autocmd BufEnter *.c                              colorscheme gruvbox
 
 
 
